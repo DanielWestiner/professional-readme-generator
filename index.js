@@ -1,7 +1,73 @@
 // TODO: Include packages needed for this application
+// Included Required Packages
+const fs = require("fs");
+const inquirer = require("inquirer");
+const generateMarkdown = require("./generateMarkdown");
+
 
 // TODO: Create an array of questions for user input
-const questions = [];
+// Assigning the question prompts to variable
+const questions = [
+    {
+    type: "input",
+    message: ,
+    name: ,
+    },
+
+    {
+    type: "input",
+    message: ,
+    name: ,
+    },
+
+    {
+    type: "input",
+    message: ,
+    name: ,
+    },   
+    
+    {
+    type: "input",
+    message: ,
+    name: ,
+    },  
+    
+    {
+    type: "input",
+    message: ,
+    name: ,
+    },   
+
+    {
+    type: "input",
+    message: ,
+    name: ,
+    },  
+
+    {
+    type: "input",
+    message: ,
+    name: ,
+    }, 
+
+    {
+    type: "input",
+    message: ,
+    name: ,
+    }, 
+
+    {
+    type: "input",
+    message: ,
+    name: ,
+    }, 
+
+    {
+    type: "input",
+    message: ,
+    name: ,
+    }, 
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
