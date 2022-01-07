@@ -1,11 +1,9 @@
-// TODO: Include packages needed for this application
 // Included Required Packages
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./generateMarkdown");
 
 
-// TODO: Create an array of questions for user input
 // Assigning the question prompts to variable
 const questions = [
     {
@@ -77,8 +75,9 @@ const writeToFile = (fileName, data) => {
     });
 };
 
-// function to initialize app
 
+
+// function to initialize app
 
 const init = () => {
     inqPrompts()
