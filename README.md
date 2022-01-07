@@ -1,7 +1,6 @@
+# Professional README Generator
 
-  # Professional README Generator
-  
-  ## Description
+## Description
 
 This project was to create a professional README Generator by using command-line features with node and the inquirer npm to generate README markdown files. By dynamically generating a README based upon a user's feedback to prompted questions, a user can get a high-quality README file created.
 
@@ -12,7 +11,7 @@ This project was to create a professional README Generator by using command-line
 
 ## Installation
 
-The files along with the assets folder can be used as a command-line interface using any computer based terminal instance. A video walkthrough of how the generator works and the process can be found at: 
+The files along with the assets folder can be used as a command-line interface using any computer based terminal instance. A video walkthrough of how the generator works and the process can be found at: https://drive.google.com/file/d/1eOrIIFkWm1vFxRjJu6Kqedk5hCOBn0Za/view?usp=sharing
 
 ## Usage
 
