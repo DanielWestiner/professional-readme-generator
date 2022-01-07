@@ -10,70 +10,83 @@ const generateMarkdown = require("./generateMarkdown");
 const questions = [
     {
     type: "input",
-    message: ,
-    name: ,
+    message: "Please enter a name for your project.",
+    name: "name",
     },
 
     {
     type: "input",
-    message: ,
-    name: ,
+    message: "Please enter a description for your project.",
+    name: "description",
     },
 
     {
     type: "input",
-    message: ,
-    name: ,
+    message: "Please enter any installation instructions for this project.",
+    name: "installation",
     },   
     
     {
     type: "input",
-    message: ,
-    name: ,
+    message: "Please enter any usage inforamtion regarding this project",
+    name: "usage",
     },  
     
     {
-    type: "input",
-    message: ,
-    name: ,
+    type: "list",
+    choices: [
+        "MIT",
+        "Mozilla",
+        "Apache",
+        "No License"
+    ],
+    message: "Please select the license you would like to use",
+    name: "license",
     },   
 
     {
     type: "input",
-    message: ,
-    name: ,
+    message: "Please list any contributors to this project",
+    name: "contributors",
     },  
 
     {
     type: "input",
-    message: ,
-    name: ,
+    message: "Please list any tests for this project",
+    name: "tests",
     }, 
 
     {
     type: "input",
-    message: ,
-    name: ,
-    }, 
-
-    {
-    type: "input",
-    message: ,
-    name: ,
-    }, 
-
-    {
-    type: "input",
-    message: ,
-    name: ,
-    }, 
+    message: "For questions about this project, enter an email",
+    name: "contact",
+    }
 ];
 
+const inqPrompts = () => {
+    return inquirer
+        .prompt(questions);
+};
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// Function to write README file
+
+const writeToFile = (fileName, data) => {
+    fs.writeFile(fileName, data, (err) =>
+    {
+        err ? console.log(err) : console.log("You've successfully created the README!");;
+    });
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+
+
+const init = () => {
+    inqPrompts()
+    .then((userAnswers) => writeToFile("./generated-readme/README.md", generateMarkdown(userAnswers)))
+}
+
+// function init() {}
 
 // Function call to initialize app
 init();
