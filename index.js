@@ -68,7 +68,6 @@ const inqPrompts = () => {
         .prompt(questions);
 };
 
-// TODO: Create a function to write README file
 // Function to write README file
 
 const writeToFile = (fileName, data) => {
@@ -78,15 +77,13 @@ const writeToFile = (fileName, data) => {
     });
 };
 
-// TODO: Create a function to initialize app
+// function to initialize app
 
 
 const init = () => {
     inqPrompts()
     .then((userAnswers) => writeToFile("./generated-readme/README.md", generateMarkdown(userAnswers)))
 }
-
-// function init() {}
 
 // Function call to initialize app
 init();
