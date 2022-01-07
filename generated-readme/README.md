@@ -1,5 +1,5 @@
 
-  # Professional Readme Generator
+  # Professional README Generator
   
   ## Description
   Tasked to create a README generator, this project utilizes the inquirer npm and node to dynamically take user input and create a README file.
@@ -13,7 +13,7 @@
   - [Contact](#contact)
   
   ## Installation
-  This app Can be used with node installed and must have inquirer npm
+  This app can be used with node installed and must have inquirer npm
 
   ## Usage
   Can be used on any computer with a terminal instance
