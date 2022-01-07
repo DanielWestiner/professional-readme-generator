@@ -3,13 +3,13 @@
 const renderLicenseBadge = (license) => {
   switch (license) {
     case "MIT":
-      return "[[License: MIT(https://img.shields.io/badge/license-MIT-red.svg)](https://opensource.org/licenses/MIT)";
+      return "[![License: MIT](https://img.shields.io/badge/license-MIT-red.svg)](https://opensource.org/licenses/MIT)";
       break;
     case "Mozilla":
-      return "[[License: Mozilla(https://img.shields.io/badge/license-mozilla-blue)](https://opensource.org/licenses/MPL-2.0)";
+      return "[![License: Mozilla](https://img.shields.io/badge/license-mozilla-blue.svg)](https://opensource.org/licenses/MPL-2.0)";
       break;
     case "Apache":
-      return "[[License: Apache(https://img.shields.io/badge/license-apache-green)](https://opensource.org/licenses/Apache-2.0)";
+      return "[![License: Apache](https://img.shields.io/badge/license-apache-green.svg)](https://opensource.org/licenses/Apache-2.0)";
       break;
     case "No License":
       return "";
@@ -24,7 +24,7 @@ const renderLicenseLink = (license) => {
   if (license === "No License") {
     return "";
   } else {
-    return `* [License](#license)`;
+    return `- [License](#license)`;
   }
 };
 
@@ -278,14 +278,12 @@ const generateMarkdown = (data) =>
   ${data.description}
 
   ## Table of Contents
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [License](#license)
-  ${renderLicenseBadge(data.license)}
-  ${renderLicenseLink(data.license)}
-  * [Contributors](#contributors)
-  * [Tests](#tests)
-  * [Contact](#contact)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributors](#contributors)
+  - [Tests](#tests)
+  - [Contact](#contact)
   
   ## Installation
   ${data.installation}
@@ -294,6 +292,8 @@ const generateMarkdown = (data) =>
   ${data.usage}
 
   ## License
+  ${renderLicenseBadge(data.license)}
+  ${renderLicenseLink(data.license)}
   ${renderLicenseSection(data)}
 
   ## Contributors
